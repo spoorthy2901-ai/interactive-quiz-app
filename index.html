@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <p class="eyebrow">LEARN • PRACTICE • IMPROVE</p>
+      <h1>Online Quiz App</h1>
+      <p class="subtitle">Test your knowledge with a quick quiz.</p>
+    </header>
+
+    <section id="start-screen" class="panel">
+      <h2>Ready to begin?</h2>
+      <p>Answer 10 multiple-choice questions and see your score at the end.</p>
+      <label for="player-name">Your name (optional)</label>
+      <input id="player-name" type="text" maxlength="40" placeholder="Enter your name">
+      <button id="start-btn" class="primary">Start Quiz</button>
+    </section>
+
+    <section id="quiz-screen" class="panel hidden" aria-live="polite">
+      <div class="quiz-meta">
+        <span id="question-count">Question 1 of 10</span>
+        <span id="score-so-far">Score: 0</span>
+      </div>
+      <div class="progress-track"><div id="progress-bar"></div></div>
+      <h2 id="question-text"></h2>
+      <div id="answer-options" class="options"></div>
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+      <button id="next-btn" class="primary" disabled>Next Question</button>
+    </section>
+
+    <section id="result-screen" class="panel hidden" aria-live="polite">
+      <p class="eyebrow">QUIZ COMPLETE</p>
+      <h2 id="result-heading">Great work!</h2>
+      <p id="result-message"></p>
+      <div class="result-score"><span id="final-score">0</span><small> / 10</small></div>
+      <p id="result-detail"></p>
+      <button id="restart-btn" class="primary">Try Again</button>
+    </section>
+    <footer>Made with HTML, CSS &amp; JavaScript</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
